@@ -30,4 +30,5 @@ vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
 
 -- Telescope
-vim.keymap.set('n','<leader>f','<cmd> Telescope find_files<cr>')
+--vim.keymap.set('n','<leader>f','<cmd>:Telescope find_files<cr>', opts)
+--vim.keymap.set('n','<leader>t', '<cmd>:NvimTreeToggle<cr>', opts)
