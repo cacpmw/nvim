@@ -46,12 +46,17 @@ return require('packer').startup(function(use)
     use { 'hrsh7th/cmp-cmdline', after = 'nvim-cmp' }       -- cmdline auto-completion
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
-    use {
-      'nvim-tree/nvim-tree.lua',config = [[require('config.nvim-tree')]],
-      requires = {
-        'nvim-tree/nvim-web-devicons', -- optional
-      },
-      }
+    use { 'nvim-tree/nvim-tree.lua',config = [[require('config.nvim-tree')]],
+            requires = {
+                'nvim-tree/nvim-web-devicons', -- optional
+            },
+    }
+
+    use {'nvim-telescope/telescope.nvim', tag = '0.1.5',
+-- or                            , branch = '0.1.x',
+            requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
     ---------------------------------------
     -- NOTE: PUT YOUR THIRD PLUGIN HERE --
     ---------------------------------------
