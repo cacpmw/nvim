@@ -16,15 +16,13 @@ local function custom_configs(bufnr)
     api.config.mappings.default_on_attach(bufnr)
 
     -- custom mappings
-      vim.keymap.set('n', '<leader>e', '<cmd>:NvimTreeToggle<cr>', {
-    noremap = true
-  })
+  
   end
 
 
 -- OR setup with some options
 require("nvim-tree").setup({
-on_attach = "custom_configs",
+    on_attach = custom_configs,
       hijack_cursor = false,
       auto_reload_on_write = true,
       disable_netrw = false,

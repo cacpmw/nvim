@@ -10,10 +10,10 @@ local opts = {
 
 -- Hint: see `:h vim.map.set()`
 -- Better window navigation
-vim.keymap.set('n', '<C-h>', '<C-w>h', opts)
-vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
-vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
-vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
+vim.keymap.set('n', '<C-h>', '<C-w>h', opts) -- navigate left 
+vim.keymap.set('n', '<C-j>', '<C-w>j', opts) -- navigate down 
+vim.keymap.set('n', '<C-k>', '<C-w>k', opts) -- navigate up  
+vim.keymap.set('n', '<C-l>', '<C-w>l', opts) -- navigate right
 
 -- Resize with arrows
 -- delta: 2 lines
@@ -29,6 +29,7 @@ vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
 
--- Telescope
---vim.keymap.set('n','<leader>f','<cmd>:Telescope find_files<cr>', opts)
---vim.keymap.set('n','<leader>t', '<cmd>:NvimTreeToggle<cr>', opts)
+vim.keymap.set('n', '<leader>f', '<cmd>:Telescope find_files<cr>', opts)
+vim.keymap.set('n','<leader>e','<cmd>:NvimTreeToggle<cr>', opts)
+vim.keymap.set('n','<leader>t','<cmd>:terminal<cr>', opts)
+vim.keymap.set('n','<leader>s',':w<CR>',opts)
