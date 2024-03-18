@@ -4,12 +4,29 @@ local opts = {
     silent = true,       -- do not show message
 }
 
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
+vim.opt.backspace = '2'
+vim.opt.showcmd = true
+vim.opt.laststatus = 2
+vim.opt.autowrite = true
+vim.opt.cursorline = true
+vim.opt.autoread = true
+
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.shiftround = true
+vim.opt.expandtab = true
+
 -----------------
 -- Normal mode --
 -----------------
 
 -- Hint: see `:h vim.map.set()`
 -- Better window navigation
+vim.keymap.set('n', '<c-n>',':NvimTreeFindFileToggle<CR>')
+vim.keymap.set('n', '<leader>h',':nohlsearch<CR>')
 vim.keymap.set('n', '<C-h>', '<C-w>h', opts) -- navigate left 
 vim.keymap.set('n', '<C-j>', '<C-w>j', opts) -- navigate down 
 vim.keymap.set('n', '<C-k>', '<C-w>k', opts) -- navigate up  

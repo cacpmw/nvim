@@ -34,18 +34,22 @@ vim.cmd([[
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    use 'tanvirtin/monokai.nvim'
-    
-    use { 'williamboman/mason.nvim' }
-    use { 'williamboman/mason-lspconfig.nvim'}
-    use { 'neovim/nvim-lspconfig' }
-    use { 'hrsh7th/nvim-cmp', config = [[require('config.nvim-cmp')]] }    
-    use { 'hrsh7th/cmp-nvim-lsp', after = 'nvim-cmp' } 
-    use { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' }        -- buffer auto-completion
-    use { 'hrsh7th/cmp-path', after = 'nvim-cmp' }          -- path auto-completion
-    use { 'hrsh7th/cmp-cmdline', after = 'nvim-cmp' }       -- cmdline auto-completion
+    use 'nvim-treesitter/nvim-treesitter'
+    use { "ellisonleao/gruvbox.nvim" }
+    use { 'williamboman/mason.nvim',
+          'williamboman/mason-lspconfig.nvim',
+          'neovim/nvim-lspconfig'
+    }
+    use 'lewis6991/gitsigns.nvim'
+    use 'tpope/vim-fugitive'
+    use { 'hrsh7th/nvim-cmp', config = [[require('config.nvim-cmp')]] }
+    use { 'hrsh7th/cmp-nvim-lsp' }
+    use { 'hrsh7th/cmp-buffer' }        -- buffer auto-completion
+    use { 'hrsh7th/cmp-path' }          -- path auto-completion
+    use { 'hrsh7th/cmp-cmdline' }       -- cmdline auto-completion
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
+    use 'rafamadriz/friendly-snippets'
     use { 'nvim-tree/nvim-tree.lua',config = [[require('config.nvim-tree')]],
             requires = {
                 'nvim-tree/nvim-web-devicons', -- optional

@@ -48,7 +48,7 @@ require("nvim-tree").setup({
         number = false,
         relativenumber = false,
         signcolumn = "yes",
-        width = 30,
+        width = 40,
         float = {
           enable = false,
           quit_on_focus_loss = true,
@@ -63,7 +63,7 @@ require("nvim-tree").setup({
         },
       },
   renderer = {
-        add_trailing = false,
+        add_trailing = true,
         group_empty = false,
         full_name = false,
         root_folder_label = ":~:s?$?/..?",
